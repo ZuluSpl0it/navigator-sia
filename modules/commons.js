@@ -105,7 +105,7 @@ const siaCall = (params, call) => new Promise((resolve, reject) => {
 	const callOptions = {
 		url: "http://" + params.localDaemon + call,
 		timeout: 60000,
-		headers: {'User-agent': 'Sia-Agent'}
+		headers: {'User-agent': 'ScPrime-Agent'}
 	}
 	request(callOptions, (err, res, body) => {
 		if (!err && (res.statusCode < 200 || res.statusCode > 299)) {
