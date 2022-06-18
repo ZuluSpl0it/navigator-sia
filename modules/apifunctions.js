@@ -832,7 +832,7 @@ exports.CsvFile = async function(params, res, req) {
         var columnNameBalance = currency + "_balance_total"
         csvArray[csvArray.length-1][columnNameBalance] = balanceTotal.toFixed(8)
 
-        // Add exchange rates only for the coins of the trade (siacoin or siafund)
+        // Add exchange rates only for the coins of the trade (SiaCloud or siafund)
         if (newTxs[i].ScChange > 0 || newTxs[i].ScChange < 0) {
             csvArray[csvArray.length-1].exchange_rate_siacoin = exchangePrice
         }

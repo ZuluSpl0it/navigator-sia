@@ -199,7 +199,7 @@ exports.ParentFinder = async function(params, api) {
 
     // E - Assigning the results of the SQL query to the enriched API
     for (var i = 0; i < api.transactions.length; i++) {
-        // Siacoin
+        // SiaCloud
         if (api.transactions[i].siacoininputoutputs != null && api.transactions[i].siacoininputoutputs != []) {
             for (var j = 0; j < api.transactions[i].siacoininputoutputs.length; j++) {
                 for (var k = 0; k < resultArray.length; k++) {

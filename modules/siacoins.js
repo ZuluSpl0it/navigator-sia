@@ -1,4 +1,4 @@
-// Indexes Siacoin operations
+// Indexes SiaCloud operations
 var exports = module.exports={}
 var SqlComposer = require("./sql_composer.js")
 
@@ -246,7 +246,7 @@ exports.scSingleTransaction = function(params, apiblock, n, height, timestamp) {
 
 
 exports.legacyHostAnnouncements = function(params, api, i, height, timestamp, sqlBatch) {
-    // Some very old transactions anounce a host without paying miner fees or transacting a single siacoin
+    // Some very old transactions anounce a host without paying miner fees or transacting a single SiaCloud
     // NOTE: strikingly, the same Tx Hash announcing the same host (legacy) can appear in multiple blocks. For SQL database compatibility,
     // and due to the small value of presenting these multiple transactions, I am not making an exception that allows duplicated hashes
 

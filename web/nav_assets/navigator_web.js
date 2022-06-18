@@ -392,7 +392,7 @@ function openTab(evt, cityName) {
                                 + '</th>'
                             + '</tr>'
                             + '<tr>'
-                                + '<td style="height: 60px; padding: 0px 15px; font-size:110%; vertical-align:center;">Confirmed Siacoin balance: </td>'
+                                + '<td style="height: 60px; padding: 0px 15px; font-size:110%; vertical-align:center;">Confirmed SiaCloudCoin balance: </td>'
                                 + '<td style="height: 60px; padding: 0px 15px; font-size:110%; vertical-align:center; text-align: right">' + readable(data[0].balanceSc) + ' SC'
                                     + '<br><span style="font-size: 12px">' + readable(data[0].receivedSc) + ' SC received / -' + readable(data[0].sentSc) + ' SC sent</span>'
                                 + '</td>'
@@ -799,7 +799,7 @@ function openTab(evt, cityName) {
             // Translating the hash types to legible and rendering the header
             var hashType
             if (data[0].Type == "ScTx") {
-                hashType = "Siacoin transaction"
+                hashType = "SiaCloudCoin transaction"
                 document.getElementById('header-icon').innerHTML = '<use xlink:href="#sctx-contrast" class="icon-contrast"/>'}
             else if (data[0].Type == "SfTx") {
                 hashType = "Siafund transaction"
@@ -2037,7 +2037,7 @@ function openTab(evt, cityName) {
                                     + '</th>'
                                 + '</tr>'
                                 + '<tr>'
-                                    + '<td style="height: 65px; padding: 0px 15px; font-size:110%; vertical-align:center;">Confirmed Siacoin balance: </td>'
+                                    + '<td style="height: 65px; padding: 0px 15px; font-size:110%; vertical-align:center;">Confirmed SiaCloudCoin balance: </td>'
                                     + '<td style="height: 65px; padding: 0px 15px; font-size:110%; vertical-align:center; text-align: right">' + readable(data[1].balanceSc) + ' SC'
                                         + '<br><span style="font-size: 12px">' + readable(data[1].receivedSc) + ' SC received / -' + readable(data[1].sentSc) + ' SC sent</span></td>'
                                 + '</tr>'
@@ -2091,7 +2091,7 @@ function openTab(evt, cityName) {
             others.sort(function(a,b) {return (a.TxType > b.TxType) ? 1 : ((b.TxType > a.TxType) ? -1 : 0);} );
             contracts.sort(function(a,b) {return (a.TxType > b.TxType) ? 1 : ((b.TxType > a.TxType) ? -1 : 0);} );
 
-            var text = "Siacoin transactions"
+            var text = "SiaCloudCoin transactions"
             drawBlockTxTable(scTxs, text)
             var text2 = "File contracts activity"
             drawBlockTxTable(contracts, text2)
@@ -2119,7 +2119,7 @@ function openTab(evt, cityName) {
             for (var n = 0; n < txs.length; n++) {
                 // Tx type label and icon
                 if (txs[n].TxType == "ScTx") {
-                    var type = "Siacoin transfer"
+                    var type = "SiaCloudCoin transfer"
                     var icon = "sctx"
                 } else if (txs[n].TxType == "SfTx") {
                     var type = "Siafund transfer"
@@ -2498,7 +2498,7 @@ function openTab(evt, cityName) {
     function txTypeIconAndText(txType) {
         // Tx type label and icon
         if (txType == "ScTx") {
-            var type = "Siacoin transfer"
+            var type = "SiaCloudCoin transfer"
             var icon = "sctx"
         } else if (txType == "SfTx") {
             var type = "Siafund transfer"

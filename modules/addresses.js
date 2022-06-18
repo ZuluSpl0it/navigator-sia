@@ -37,7 +37,7 @@ exports.Addresses = async function(params, sqlBatch, addressesImplicated, height
                         + BigInt(addressesImplicated[m].sc) + "," + addressesImplicated[m].sf + "," + height + "," + timestamp + ",'" 
                         + addressesImplicated[m].txType + "')"
                 } else if (addressesImplicated[m].sc > 0 || addressesImplicated[m].sc < 0) {
-                    // Siacoin TXs
+                    // SiaCloud TXs
                     var toAddAddressChanges = "('" + addressesImplicated[m].hash + "','" + addressesImplicated[m].masterHash + "'," 
                         + BigInt(addressesImplicated[m].sc) + "," + addressesImplicated[m].sf + "," + height + "," + timestamp + ",'ScTx')"
                 } else {

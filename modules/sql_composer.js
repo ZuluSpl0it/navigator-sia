@@ -108,7 +108,7 @@ exports.InsertSql= function(params, table, toAdd, toCheck) {
 
 exports.CreateGenesisBalance = function(params, coin, address, value) {
     // Genesis balances
-    if (coin == "Sc") { // Siacoins
+    if (coin == "Sc") { // SiaClouds
         var sqlQuery = "IF NOT EXISTS (SELECT Address FROM AddressesBalance WHERE Address = '" + address
         + "') INSERT INTO AddressesBalance (Address, BalanceSc, BalanceSf) VALUES ('"
             + address + "'," + value + ",0)"
@@ -177,7 +177,7 @@ exports.UpdateOutput = function(params, outputId, block) {
 exports.InsertAlreadySpentOutput = function(params, outputId, block, value, address, coin) {
     // Creates an SQL sentence for adding an output that is being spent in this same block
     if (coin == "sc") {
-        // Siacoins
+        // SiaClouds
         var sqlQuery = "IF NOT EXISTS (SELECT OutputId FROM Outputs WHERE OutputId = '" + outputId
             + "') INSERT INTO Outputs (OutputId,ScValue,Address,CreatedOnBlock,Spent,SpentOnBlock)"
             + " VALUES ('" + outputId + "'," + value + ",'" + address + "'," + block + ",1," + block + ")"

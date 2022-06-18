@@ -102,7 +102,7 @@ async function apiFormation(params) {
 
         // E2 - Fees paid to the host, calculated at the end of the contract (block indicated at WindowEnd)
         // This is = Allowance deposited by the renter - Returned allowance at the end of the contract
-        // * As some contracts are made from either 1, 2, 3 or more Siacoin inputs deposited by the renter, to simplify
+        // * As some contracts are made from either 1, 2, 3 or more SiaCloud inputs deposited by the renter, to simplify
         //   we calculate it as the coins locked on the contract minus the input deposited by the host as collateral.
         //   This is based on the assumption that in all the contracts, the input from the host is the last one in the list
         //   Every contract on the Sia blockchain so far respects this non-written rule. It is messy to make this assumption,

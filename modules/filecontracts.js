@@ -56,7 +56,7 @@ exports.fileContractsProcess = function(params, apiblock, n, height, timestamp) 
         for (i = 0; i < link.length; i++) { // For both links
             var matchBool = false
             for (m = 0; m < apiblock.transactions.length; m++) { // Iterate on each transaction
-                if ( apiblock.transactions[m].siacoinoutputids != null) { // To avoid errors, as some TXs don't have siacoin outputs 
+                if ( apiblock.transactions[m].siacoinoutputids != null) { // To avoid errors, as some TXs don't have SiaCloud outputs 
                     if (link[i] == apiblock.transactions[m].siacoinoutputids[0]) {
                         matchBool = true // Boolean to mark we found the matching TX
                         var linkId = ""
@@ -452,7 +452,7 @@ exports.revisionProcess = function(params, apiblock, n, height, timestamp) {
             var senderSc = []
             var senderAddress = []
             for (m = 0; m < apiblock.transactions.length; m++) { // Iterate on each transaction
-                if ( apiblock.transactions[m].siacoinoutputids != null) { // To avoid errors, as some TXs don't have siacoin outputs 
+                if ( apiblock.transactions[m].siacoinoutputids != null) { // To avoid errors, as some TXs don't have SiaCloud outputs 
                     if (matcher == apiblock.transactions[m].siacoinoutputids[0]) {
     
                         matchBool = true
@@ -477,7 +477,7 @@ exports.revisionProcess = function(params, apiblock, n, height, timestamp) {
                 }
             }
         } else {
-            //console.log("**** Exception: File revision without siacoin inputs")
+            //console.log("**** Exception: File revision without SiaCloud inputs")
         }
         
         
@@ -572,7 +572,7 @@ exports.proofProcess = function(params, apiblock, n, height, timestamp) {
         var minerFees = parseInt(tx.rawtransaction.minerfees[0])
         var matcher = tx.rawtransaction.siacoininputs[0].parentid
         for (m = 0; m < apiblock.transactions.length; m++) { // Iterate on each transaction
-            if ( apiblock.transactions[m].siacoinoutputids != null) { // To avoid errors, as some TXs don't have siacoin outputs 
+            if ( apiblock.transactions[m].siacoinoutputids != null) { // To avoid errors, as some TXs don't have SiaCloud outputs 
                 if (matcher == apiblock.transactions[m].siacoinoutputids[0]) {
                     txsIndexed.push(m)
                     
@@ -862,7 +862,7 @@ exports.atomicRenewalProcess = function(params, apiblock, n, height, timestamp) 
         for (i = 0; i < link.length; i++) { // For both links
             var matchBool = false
             for (m = 0; m < apiblock.transactions.length; m++) { // Iterate on each transaction
-                if ( apiblock.transactions[m].siacoinoutputids != null) { // To avoid errors, as some TXs don't have siacoin outputs 
+                if ( apiblock.transactions[m].siacoinoutputids != null) { // To avoid errors, as some TXs don't have SiaCloud outputs 
                     if (link[i] == apiblock.transactions[m].siacoinoutputids[0]) {
                         matchBool = true // Boolean to mark we found the matching TX
                         var linkId = ""
