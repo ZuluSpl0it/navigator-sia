@@ -506,7 +506,7 @@ async function checkReorgs(sqlHeight, blocksToIndex, blocksOrphaned) {
 
         // Determining the new mining pool
         // Mining pool name
-        var miningPool = "Unknown" // Default 
+        var miningPool = "Solo" // Default 
         for (var a = 0; a < params.poolsDb.length; a++) { // For each pool
             for (var b = 0; b < params.poolsDb[a].addresses.length; b++) { // For each address
                 if (apiConsensus.minerpayouts[0].unlockhash == params.poolsDb[a].addresses[b]) {
@@ -514,7 +514,7 @@ async function checkReorgs(sqlHeight, blocksToIndex, blocksOrphaned) {
                     b = params.poolsDb[a].addresses.length // Finishes the loop faster
                 }
             }
-            if (miningPool != "Unknown") {
+            if (miningPool != "Solo") {
                 a = params.poolsDb.length // Finishes the loop faster
             }
         }

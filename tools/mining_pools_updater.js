@@ -42,8 +42,8 @@ if (process.argv[2] == null) {
 
 async function main(poolsDb) {
 
-    // First we reset the pools to "Unknown"
-    var sqlQuery = "UPDATE BlockInfo SET MiningPool = 'Unknown'"
+    // First we reset the pools to "Solo"
+    var sqlQuery = "UPDATE BlockInfo SET MiningPool = 'Solo'"
     await SqlAsync.Sql(params, sqlQuery)
     console.log("* Pools info reseted")
 
