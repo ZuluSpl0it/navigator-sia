@@ -760,7 +760,7 @@ exports.CsvFile = async function(params, res, req) {
         var exangedCurrencySf = "-"
         var correctedAmount = 0 // from Hastings to SC
 
-        correctedAmount = newTxs[i].ScChange / 1000000000000000000000000
+        correctedAmount = newTxs[i].ScChange / 1000000000000000000000000000
         for (var j = 0; j < exRates.length; j++) {
             if (correctedTimestamp == exRates[j].Timestamp) {
                 exchangePrice = exRates[j][currency]
@@ -928,7 +928,7 @@ exports.BalanceTrack = async function(params, res, req) {
     for (var i = 0; i < txs.length; i++) {
         // Finding the position in the array according to the timestamp
         var pos = Math.floor((txs[i].Timestamp - firstTrade) / 86400)
-        balances[pos].sc = balances[pos].sc + (txs[i].ScChange/1000000000000000000000000)
+        balances[pos].sc = balances[pos].sc + (txs[i].ScChange/1000000000000000000000000000)
         balances[pos].sf = balances[pos].sf + txs[i].SfChange
     }
 

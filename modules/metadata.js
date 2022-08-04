@@ -28,7 +28,7 @@ exports.MetadataBlock = async function(params, api) {
     try {
         var prevFeeCount = BigInt(prevBlock.FeeCountHastings)
     } catch (e) {
-        var prevFeeCount = BigInt(prevBlock.FeeCount * 1000000000000000000000000)
+        var prevFeeCount = BigInt(prevBlock.FeeCount * 1000000000000000000000000000)
     }
 
     var metadata = {
@@ -53,7 +53,7 @@ exports.MetadataBlock = async function(params, api) {
         NewContracts: 0
     }
     // Adding the Fee count noted in SC, for code compatibility
-    metadata.FeeCount = Math.round(Number(metadata.FeeCountHastings) / 1000000000000000000000000)
+    metadata.FeeCount = Math.round(Number(metadata.FeeCountHastings) / 1000000000000000000000000000)
 
     // Transactions iterator
     for (var i = 0; i < api.transactions.length; i++) {

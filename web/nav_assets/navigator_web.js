@@ -899,7 +899,7 @@ function openTab(evt, cityName) {
                         
                         if (data[2].transactions[n].ScChange < 0) {
                             var valueInBox = data[2].transactions[n].ScChange // Push the change in SC
-                            valueInBox = readable(valueInBox) + " SC"
+                            valueInBox = readable(valueInBox) + " SCC"
                         } else if (data[2].transactions[n].SfChange < 0) {
                             var valueInBox = data[2].transactions[n].SfChange + " SF" // Push the change in SF
                         }
@@ -934,7 +934,7 @@ function openTab(evt, cityName) {
                 var iconInBox = "contract"
                 var contractInBox = shortHash(data[1].ContractId)
                 var linkInBox = htmlPath + "?search=" + data[1].ContractId
-                var valueInBox = readable(data[1].Output0Value + data[1].Output1Value + data[1].Output2Value) + " SC"
+                var valueInBox = readable(data[1].Output0Value + data[1].Output1Value + data[1].Output2Value) + " SCC"
                 addRowSender(objectInBox, linkInBox, contractInBox, valueInBox, iconInBox, colorInBox)
             }
 
@@ -944,7 +944,7 @@ function openTab(evt, cityName) {
                 var iconInBox = "allowance"
                 var addressInBox = shortHash(data[1].AllowancePosting)
                 var linkInBox = htmlPath + "?search=" + data[1].AllowancePosting
-                var valueInBox = "- " + readable(data[1].RenterValue) + " SC"
+                var valueInBox = "- " + readable(data[1].RenterValue) + " SCC"
                 addRowSender(objectInBox, linkInBox, addressInBox, valueInBox, iconInBox, colorInBox)
 		    
 		if (data[1].Renter2Value > 0) {
@@ -954,7 +954,7 @@ function openTab(evt, cityName) {
                     var iconInBox = "allowance"
                     var addressInBox = shortHash(data[1].Allowance2Posting)
                     var linkInBox = htmlPath + "?search=" + data[1].Allowance2Posting
-                    var valueInBox = "- " + readable(data[1].Renter2Value) + " SC"
+                    var valueInBox = "- " + readable(data[1].Renter2Value) + " SCC"
                     addRowSender(objectInBox, linkInBox, addressInBox, valueInBox, iconInBox, colorInBox)
                 }
 		
@@ -965,7 +965,7 @@ function openTab(evt, cityName) {
 		    var iconInBox = "allowance"
 		    var addressInBox = shortHash(data[1].Allowance3Posting)
 		    var linkInBox = htmlPath + "?search=" + data[1].Allowance3Posting
-		    var valueInBox = "- " + readable(data[1].Renter3Value) + " SC"
+		    var valueInBox = "- " + readable(data[1].Renter3Value) + " SCC"
 		    addRowSender(objectInBox, linkInBox, addressInBox, valueInBox, iconInBox, colorInBox)
 		}
                 
@@ -973,7 +973,7 @@ function openTab(evt, cityName) {
                 var iconInBox2 = "collateral"
                 var addressInBox2 = shortHash(data[1].CollateralPosting)
                 var linkInBox2 = htmlPath + "?search=" + data[1].CollateralPosting
-                var valueInBox2 = "- " + readable(data[1].HostValue) + " SC"
+                var valueInBox2 = "- " + readable(data[1].HostValue) + " SCC"
                 addRowSender(objectInBox2, linkInBox2, addressInBox2, valueInBox2, iconInBox2, colorInBox)
             }
 
@@ -986,7 +986,7 @@ function openTab(evt, cityName) {
                 var sizeInBox = 4
                 var subsidy =  300000 - data[1].Height
                 if (subsidy < 30000) {subsidy = 30000} // Minimal future subsidy
-                subsidy = subsidy * 1000000000000000000000000
+                subsidy = subsidy * 1000000000000000000000000000
 
                 // Adding Foundation subsidy to coinbase, if exists
                 var foundationSubsidy = 0
@@ -994,10 +994,10 @@ function openTab(evt, cityName) {
                     foundationSubsidy = data[2].transactions[1].ScChange
                 }
 
-                subsidyReadable = readable(subsidy + foundationSubsidy) + " SC"
+                subsidyReadable = readable(subsidy + foundationSubsidy) + " SCC"
                 addSimpleSenderBox(objectInBox, subsidyReadable, colorInBox, iconInBox, linkInBox, sizeInBox)
                 
-                var minedFees = readable(data[2].transactions[0].ScChange - subsidy) + " SC"
+                var minedFees = readable(data[2].transactions[0].ScChange - subsidy) + " SCC"
                 var objectInBox = "Collected transaction fees"
                 addSimpleSenderBox(objectInBox, minedFees, colorInBox, iconInBox, linkInBox, sizeInBox)
             }
@@ -1022,7 +1022,7 @@ function openTab(evt, cityName) {
                     if (data[2].transactions[n].ScChange > 0 || data[2].transactions[n].SfChange > 0) {
                         if (data[2].transactions[n].ScChange > 0) {
                             var valueInBox = data[2].transactions[n].ScChange // Push the change in SC
-                            valueInBox = readable(valueInBox) + " SC"
+                            valueInBox = readable(valueInBox) + " SCC"
                         } else if (data[2].transactions[n].SfChange > 0) {
                             var valueInBox = data[2].transactions[n].SfChange + " SF" // Push the change in SF
                         }
@@ -1108,11 +1108,11 @@ function openTab(evt, cityName) {
                 var iconInBox = "renter"
                 var addressInBox = shortHash(data[1].Output0Address)
                 var linkInBox = htmlPath + "?search=" + data[1].Output0Address
-                var valueInBox = readable(data[1].Output0Value) + " SC"
+                var valueInBox = readable(data[1].Output0Value) + " SCC"
                 var firstReceiverBool = true
                 addRowReceiver(objectInBox, linkInBox, addressInBox, valueInBox, iconInBox, firstReceiverBool, colorInBox)
                 var addressInBox2 = shortHash(data[1].Output1Address)
-                var valueInBox2 = readable(data[1].Output1Value) + " SC"
+                var valueInBox2 = readable(data[1].Output1Value) + " SCC"
                 var linkInBox2 = htmlPath + "?search=" + data[1].Output1Address
                 var iconInBox2 = "host"
                 var firstReceiverBool = false
@@ -1120,7 +1120,7 @@ function openTab(evt, cityName) {
                 if (data[1].Result == "fail") {
                     var objectInBox3 = "Burning address: lost collateral"
                     var addressInBox3 = shortHash(data[1].Output2Address)
-                    var valueInBox3 = readable(data[1].Output2Value) + " SC"
+                    var valueInBox3 = readable(data[1].Output2Value) + " SCC"
                     var linkInBox3 = htmlPath + "?search=" + data[1].Output2Address
                     var iconInBox3 = "burn"
                     var colorInBox = theme.brightRed
@@ -1130,7 +1130,7 @@ function openTab(evt, cityName) {
                 var objectInBox = "Formed Contract ID"
                 var addressInBox = shortHash(data[1].ContractId)
                 var totalSc = data[1].ValidProof1Value + data[1].ValidProof2Value
-                var valueInBox = readable(totalSc) + " SC"
+                var valueInBox = readable(totalSc) + " SCC"
                 var linkInBox = htmlPath + "?search=" + data[1].ContractId
                 var iconInBox = "contract"
                 var colorInBox = theme.darkGreen
@@ -1142,7 +1142,7 @@ function openTab(evt, cityName) {
                     for (var i = 0; i < data[5].transactions.length; i++) {
                         var objectInBox = "Renter address"
                         var addressInBox = shortHash(data[5].transactions[i].Address)
-                        var valueInBox = readable(data[5].transactions[i].ScChange) + " SC"
+                        var valueInBox = readable(data[5].transactions[i].ScChange) + " SCC"
                         var linkInBox = htmlPath + "?search=" + data[5].transactions[i].Address
                         var iconInBox = "renter"
                         var colorInBox = theme.darkGreen
@@ -1153,7 +1153,7 @@ function openTab(evt, cityName) {
 
                 // SiaFund fees
                 var objectInBox = "Fees paid to SF holders"
-                var valueInBox = readable(data[1].SfFees) + " SC"
+                var valueInBox = readable(data[1].SfFees) + " SCC"
                 var linkInBox = ""
                 var iconInBox = "sfclaim"
                 var colorInBox = theme.darkGreen
@@ -1163,7 +1163,7 @@ function openTab(evt, cityName) {
             
             // Miner fees. Not if it is a collateral post or an allowance post
             if (data[0].Type != "allowancePost" && data[0].Type != "collateralPost" && data[0].Type != "contractresol" && data[0].Type != "blockreward") {
-                var readableFees = readable(data[1].Fees) + " SC"
+                var readableFees = readable(data[1].Fees) + " SCC"
                 var objectInBox = "Miner fees"
                 var colorInBox = theme.darkGreen
                 var iconInBox = "miner"
@@ -1385,7 +1385,7 @@ function openTab(evt, cityName) {
             div.className = 'row';
             var coinValue = ""
             if (data[1].ScValue > 0) {
-                coinValue = readable(data[1].ScValue) + " SC"
+                coinValue = readable(data[1].ScValue) + " SCC"
             } else if (data[1].SfValue > 0) {
                 coinValue = data[1].SfValue + " SF"
             }
@@ -1488,7 +1488,7 @@ function openTab(evt, cityName) {
 
             // Totals transacted. Not if a contract
             if (data[0].Type == "contract") {
-                transacted = readable(data[1].RenterValue + data[1].HostValue) + " SC"
+                transacted = readable(data[1].RenterValue + data[1].HostValue) + " SCC"
             } else {
                 var totalSc = 0
                 var totalSf = 0
@@ -1499,7 +1499,7 @@ function openTab(evt, cityName) {
                             totalSf = totalSf + data[2].transactions[n].SfChange
                         }
                     }
-                transacted = readable(totalSc + data[1].Fees) + " SC"
+                transacted = readable(totalSc + data[1].Fees) + " SCC"
                 
                 // Add SF to the result, only when there were trasnacted
                 if (totalSf != 0) {
@@ -2154,9 +2154,9 @@ function openTab(evt, cityName) {
                 }
 
                 if (txs[n].TxType == "SfTx") {
-                    var value = txs[n].TotalAmountSf + " SF / " + readable(txs[n].TotalAmountSc) + " SC"
+                    var value = txs[n].TotalAmountSf + " SF / " + readable(txs[n].TotalAmountSc) + " SCC"
                 } else {
-                    var value = readable(txs[n].TotalAmountSc) + " SC"
+                    var value = readable(txs[n].TotalAmountSc) + " SCC"
                 }
 
 
@@ -2211,9 +2211,9 @@ function openTab(evt, cityName) {
             var contractSize = readableContractsize + ' <span style="font-size: 70%; padding: 0px 0px 0px 10px">' + data[1].TotalContractSize + " bytes</span>"
 
             readableContractcost = ""
-            if (data[1].TotalContractCost >= 1000000000000000000000000000000 && data[1].TotalContractCost < 1000000000000000000000000000000000) {readableContractcost = (data[1].TotalContractCost/1000000000000000000000000000000).toFixed(2) + " millions SC"}
-            if (data[1].TotalContractCost >= 1000000000000000000000000000000000 && data[1].TotalContractCost < 1000000000000000000000000000000000000) {readableContractcost = (data[1].TotalContractCost/1000000000000000000000000000000000).toFixed(2) + " billions SC"}
-            var contractCost = readableContractcost + ' <span style="font-size: 70%; padding: 0px 0px 0px 10px">' + parseInt(data[1].TotalContractCost / 1000000000000000000000000) + " SC</span>"
+            if (data[1].TotalContractCost >= 1000000000000000000000000000000 && data[1].TotalContractCost < 1000000000000000000000000000000000) {readableContractcost = (data[1].TotalContractCost/1000000000000000000000000000000).toFixed(2) + " millions SCC"}
+            if (data[1].TotalContractCost >= 1000000000000000000000000000000000 && data[1].TotalContractCost < 1000000000000000000000000000000000000) {readableContractcost = (data[1].TotalContractCost/1000000000000000000000000000000000).toFixed(2) + " millions SCC"}
+            var contractCost = readableContractcost + ' <span style="font-size: 70%; padding: 0px 0px 0px 10px">' + parseInt(data[1].TotalContractCost / 1000000000000000000000000000) + " SC</span>"
 
             var readableActivecontractsize = ""
             if (data[1].ActiveContractSize >= 1073741824 && data[1].ActiveContractSize < 1099511627776) {readableActivecontractsize = ((data[1].ActiveContractSize/1073741824).toFixed(2)) + " GB"}
@@ -2223,11 +2223,11 @@ function openTab(evt, cityName) {
             var activeContractSize = readableActivecontractsize + ' <span style="font-size: 70%; padding: 0px 0px 0px 10px">' + data[1].ActiveContractSize + " bytes</span>"
 
             var readableActivecontractcost = ""
-            if (data[1].ActiveContractCost >= 1000000000000000000000000000000 && data[1].ActiveContractCost < 1000000000000000000000000000000000) {readableActivecontractcost = (data[1].ActiveContractCost/1000000000000000000000000000000).toFixed(2) + " millions SC"}
-            if (data[1].ActiveContractCost >= 1000000000000000000000000000000000 && data[1].ActiveContractCost < 1000000000000000000000000000000000000) {readableActivecontractcost = (data[1].ActiveContractCost/1000000000000000000000000000000000).toFixed(2) + " billions SC"}
-            var activeContractCost = readableActivecontractcost + ' <span style="font-size: 70%; padding: 0px 0px 0px 10px">' + parseInt(data[1].ActiveContractCost / 1000000000000000000000000) + " SC</span>"
+            if (data[1].ActiveContractCost >= 1000000000000000000000000000000 && data[1].ActiveContractCost < 1000000000000000000000000000000000) {readableActivecontractcost = (data[1].ActiveContractCost/1000000000000000000000000000000).toFixed(2) + " millions SCC"}
+            if (data[1].ActiveContractCost >= 1000000000000000000000000000000000 && data[1].ActiveContractCost < 1000000000000000000000000000000000000) {readableActivecontractcost = (data[1].ActiveContractCost/1000000000000000000000000000000000).toFixed(2) + " millions SCC"}
+            var activeContractCost = readableActivecontractcost + ' <span style="font-size: 70%; padding: 0px 0px 0px 10px">' + parseInt(data[1].ActiveContractCost / 1000000000000000000000000000) + " SC</span>"
 
-            var totalCoins = (data[1].TotalCoins/1000000000000000000000000000000000).toFixed(2) + ' billions of SC <span style="font-size: 70%; padding: 0px 0px 0px 10px">' + parseInt(data[1].TotalCoins/1000000000000000000000000) + " SC</span>"
+            var totalCoins = (data[1].TotalCoins/1000000000000000000000000000000000).toFixed(2) + ' millions of SC <span style="font-size: 70%; padding: 0px 0px 0px 10px">' + parseInt(data[1].TotalCoins/1000000000000000000000000000) + " SC</span>"
 
             var div = document.createElement('div');
             div.className = 'row';
@@ -2395,7 +2395,7 @@ function openTab(evt, cityName) {
                     if (unconfirmedTxs[i].SfValue > 0) {var color = "purple"}
                     else {var color = "orange"}
                 } else {
-                    var value = readable(unconfirmedTxs[i].ScValue) + " SC"
+                    var value = readable(unconfirmedTxs[i].ScValue) + " SCC"
                     if (unconfirmedTxs[i].ScValue > 0) {
                         var color = theme.darkGreen
                     } else {
@@ -2437,7 +2437,7 @@ function openTab(evt, cityName) {
                 if (txs[n].SfChange > 0) {var color = "purple"}
                 else {var color = "orange"}
             } else {
-                var value = readable(txs[n].ScChange) + " SC"
+                var value = readable(txs[n].ScChange) + " SCC"
                 if (txs[n].ScChange > 0) {
                     var color = theme.darkGreen
                 } else {
@@ -2839,9 +2839,9 @@ function openTab(evt, cityName) {
                         + '</div>'
                     + '</div>'
 
-                    renderBalanceChart("SC", currency, data.scJson, data.scUsdJson) // Default rendering
+                    renderBalanceChart("SCC", currency, data.scJson, data.scUsdJson) // Default rendering
                     $("#scBalanceSwitch").click("click", function() {
-                        renderBalanceChart("SC", currency, data.scJson, data.scUsdJson)
+                        renderBalanceChart("SCC", currency, data.scJson, data.scUsdJson)
                     })
                     $("#sfBalanceSwitch").click("click", function() {
                         renderBalanceChart("SF", currency, data.sfJson, data.sfUsdJson)
@@ -2851,7 +2851,7 @@ function openTab(evt, cityName) {
                 }
 
                 if (data.scDataBool == true && data.sfDataBool == false) {
-                    renderBalanceChart("SC", currency, data.scJson, data.scUsdJson) // Default rendering
+                    renderBalanceChart("SCC", currency, data.scJson, data.scUsdJson) // Default rendering
                 } else if (data.scDataBool == false && data.sfDataBool == true) {
                     renderBalanceChart("SF", currency, data.sfJson, data.sfUsdJson) // Default rendering
                 }
@@ -2961,7 +2961,7 @@ function openTab(evt, cityName) {
     
     function readable(number) {
         // Transforms numbers into readable: significant decimal digits, 3-digit separators
-        number = number / 1000000000000000000000000
+        number = number / 1000000000000000000000000000
         var original = number
         if (number < 0) {
             number = Math.abs(number)
