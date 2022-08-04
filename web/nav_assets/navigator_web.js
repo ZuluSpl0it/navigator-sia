@@ -2010,11 +2010,11 @@ function openTab(evt, cityName) {
 
             // Unconfirmed balances
             var pendingDiv = ""
-            if (data[1].pendingSc == 0 && data[1].pendingSf == 0) { pendingDiv = "0 SC / 0 SF" }
+            if (data[1].pendingSc == 0 && data[1].pendingSf == 0) { pendingDiv = "0 SCC / 0 SF" }
             if (data[1].pendingSc > 0) {
-                pendingDiv = "<font style='color: " + theme.darkGreen + "'>+" + readable(data[1].pendingSc) + " SC</font>"
+                pendingDiv = "<font style='color: " + theme.darkGreen + "'>+" + readable(data[1].pendingSc) + " SCC</font>"
             } else if (data[1].pendingSc < 0) {
-                pendingDiv = "<font style='color: " + theme.brightRed + "'>" + readable(data[1].pendingSc) + " SC</font>"
+                pendingDiv = "<font style='color: " + theme.brightRed + "'>" + readable(data[1].pendingSc) + " SCC</font>"
             }
             if (data[1].pendingSc != 0 && data[1].pendingSf != 0) { pendingDiv = pendingDiv + " / "}
             if (data[1].pendingSf > 0) {
