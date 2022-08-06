@@ -1,5 +1,5 @@
 // delete_blocks.js - A tool for deleting a block or a range of blocks in a Navigator database
-// Github: https://github.com/hakkane84/navigator-sia
+// Github: https://github.com/zuluspl0it/navigator-sia
 // License: GNU AGPLv3
 // Author: Salvador Herrera (keops_cc@outlook.com)
 

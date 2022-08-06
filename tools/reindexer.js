@@ -1,5 +1,5 @@
 // Reindexer.js - A tool for re-indexing an specific block on the database of Navigator-Sia
-// Github: https://github.com/hakkane84/navigator-sia
+// Github: https://github.com/zuluspl0it/navigator-sia
 // License: GNU AGPLv3
 // Author: Salvador Herrera (keops_cc@outlook.com)
 

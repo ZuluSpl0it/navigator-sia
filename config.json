@@ -95,7 +95,7 @@
     "donationAddress": "bde3467039a6d9a563224330ff7578a027205f1f2738e1e0daf134d8ded1878cf5870c41927d",
 
     // The link to your Github repository. An icon will be displayed at the footer of the webpage with the link
-    "githubRepository": "https://github.com/hakkane84/navigator-sia",
+    "githubRepository": "https://github.com/zuluspl0it/navigator-sia",
 
     // "Routers" is a technology by keops.cc that allows Navigator to interact safely with Sia daemons in remote location. The router needs
     // to be installed in the remote machine, and at the time of writing this, the code is not yet ready to be open sourced. By default,

@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/hakkane84/navigator-sia.git"
+    "url": "git+https://github.com/zuluspl0it/navigator-sia.git"
   },
   "keywords": [
     "sia",
@@ -18,9 +18,9 @@
   "author": "Salvador Herrera",
   "license": "AGPL-3.0-or-later",
   "bugs": {
-    "url": "https://github.com/hakkane84/navigator-sia/issues"
+    "url": "https://github.com/zuluspl0it/navigator-sia/issues"
   },
-  "homepage": "https://github.com/hakkane84/navigator-sia#readme",
+  "homepage": "https://github.com/zuluspl0it/navigator-sia#readme",
   "dependencies": {
     "axios": "^0.19.2",
     "babel-runtime": "^6.26.0",

@@ -1,5 +1,5 @@
 // mining_pools_updater.js - A tool for updating the mining pools that mined blocks in the Navigator database
-// Github: https://github.com/hakkane84/navigator-sia
+// Github: https://github.com/zuluspl0it/navigator-sia
 // License: GNU AGPLv3
 // Author: Salvador Herrera (keops_cc@outlook.com)
 

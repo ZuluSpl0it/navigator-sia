@@ -1,5 +1,5 @@
 // Navigator-Sia: an advanced blockchain explorer for the Sia network
-// Github: https://github.com/hakkane84/navigator-sia
+// Github: https://github.com/zuluspl0it/navigator-sia
 // License: GNU AGPLv3
 // Author: Salvador Herrera (keops_cc@outlook.com)
 

@@ -26,7 +26,7 @@ var theme = {
 var htmlPath = ''
 var landingRefreshPeriod = 15000
 var donationAddress = 'bde3467039a6d9a563224330ff7578a027205f1f2738e1e0daf134d8ded1878cf5870c41927d'
-var githubRepository = 'https://github.com/hakkane84/navigator-sia'
+var githubRepository = 'https://github.com/zuluspl0it/navigator-sia'
 var useCoinGeckoPrices = true
 // INJECTION POINT *************************************************************
 // Important: Do not edit or delete the line above
@@ -34,7 +34,7 @@ var useCoinGeckoPrices = true
 
 
 // Website scripts for Navigator 
-// Github: https://github.com/hakkane84/navigator-sia
+// Github: https://github.com/zuluspl0it/navigator-sia
 // License: GNU AGPLv3
 
 var apiPath = "/navigator-api"
